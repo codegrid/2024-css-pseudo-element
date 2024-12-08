@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>details-content擬似要素</title>
+  <style>
+  details[open]::details-content {
+    border: 5px dotted tomato;
+  }
+  </style>
+</head>
+<body>
+
+<details>
+    <summary>summary部分のテキスト</summary>
+    <p>テキストが入ります</p>
+    <ul>
+        <li>リストです</li>
+        <li>リストです</li>
+        <li>リストです</li>
+    </ul>
+</details>
+      
+<details open>
+    <summary>summary部分のテキスト</summary>
+    <p>テキストが入ります</p>
+    <ul>
+        <li>リストです</li>
+        <li>リストです</li>
+        <li>リストです</li>
+    </ul>
+</details>
+
+</body>
+</html>

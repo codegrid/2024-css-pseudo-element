@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>file-selectors-button擬似要素</title>
+  <style>
+  .-custom {
+    border: 3px solid black;
+    border-radius: 10px;
+  }
+
+  .-custom::file-selector-button {
+    padding: 10px;
+    border: 0;
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+
+  .-custom:hover::file-selector-button {
+    color: yellow;
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+
+<h2>通常のもの</h2>
+<input type="file">
+  
+<h2>スタイルをかえたもの</h2>
+<input class="-custom" type="file">
+
+</body>
+</html>

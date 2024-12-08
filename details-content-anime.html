@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <title>details-content擬似要素のアニメーション</title>
+  <style>
+  :root { interpolate-size: allow-keywords; }
+
+  ::details-content {
+    transition:
+      opacity 0.5s ease,
+      height 0.5s ease,
+      content-visibility 0.5s ease allow-discrete;
+    height: 0;
+    opacity: 0;
+    overflow: clip;
+  }
+
+  details[open]::details-content {
+    border: 5px dotted tomato;
+    opacity: 1;
+    height: auto;
+  }
+  </style>
+</head>
+<body>
+
+<details>
+    <summary>summary部分のテキスト</summary>
+    <p>テキストが入ります</p>
+    <ul>
+        <li>リストです</li>
+        <li>リストです</li>
+        <li>リストです</li>
+    </ul>
+</details>
+      
+<details open>
+    <summary>summary部分のテキスト</summary>
+    <p>テキストが入ります</p>
+    <ul>
+        <li>リストです</li>
+        <li>リストです</li>
+        <li>リストです</li>
+    </ul>
+</details>
+
+</body>
+</html>
